@@ -7,4 +7,4 @@ for row in sheet["B2":"D4"]:
     r = []
     for cell in row:
         r.append(cell.value)
-        print(r)
+    print(r)
