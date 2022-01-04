@@ -2,13 +2,14 @@ dummy_data = [
     ["伊藤", 300],
     ["伊藤", 600],
     ["伊藤", 200],
-    ["伊藤", 300],
-    ["伊藤", 200]
+    ["田中", 300],
+    ["田中", 200]
 ]
 
 users = {}
 for row in dummy_data:
     name, value = row
+    print(name)
     if name not in users:
         users[name] = []
     users[name].append(row)
