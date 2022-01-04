@@ -26,9 +26,9 @@ def make_user_invoice(name, data):
         sheet.cell(row, 6, price)
         sheet.cell(row, 7, cnt*price)
 
-        out_file = out_dir+'/' + name + '様.xlsx'
-        book.save(out_file)
-        print("save:", out_file)
+    out_file = out_dir+'/' + name + '様.xlsx'
+    book.save(out_file)
+    print("save:", out_file)
 
 if __name__=="__main__":
     gen_invoice()
