@@ -1,14 +1,14 @@
 import os, requests, csv
 from bs4 import BeautifulSoup
 
-target_url = 'https://uta.pw/shodou/index/php?master'
+target_url = 'https://uta.pw/shodou/index.php?master'
 save_file = 'meisaku.txt'
 
 html = requests.get(target_url).text
 soup = BeautifulSoup(html, 'html5lib')
 
 res = []
-for art in soup.select('.art_title'):
+for art in soup.select('.article'):
     art_titles = art.select('.art_title')
     if len(art_titles) < 2: continue
     title = art_titles[1].text
