@@ -2,9 +2,9 @@ import requests, urllib, os, time
 from bs4 import BeautifulSoup
 
 save_dir = './pydoc_tutorial'
-top_page = 'https/:/docs.python.org/ja/3/tutorial/index/html'
+top_page = 'https://docs.python.org/ja/3/tutorial/index.html'
 check_url = 'https://docs.python.org/ja/3/tutorial'
-visited = []
+visited = {}
 
 def get_page(url):
     if check_url not in url: return
