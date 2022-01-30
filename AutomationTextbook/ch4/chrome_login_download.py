@@ -11,17 +11,17 @@ options.add_experimental_option('prefs',{
 def login_download():
     driver = webdriver.Chrome(options=options)
     try_login(driver)
-    link_click(driver,'マイページ')
-    link_click(driver,'CSVでダウンロード')
+    link_click(driver, 'マイページ')
+    link_click(driver, 'CSVでダウンロード')
     for i in range(30):
         if os.path.exists(save_file): break
         time.sleep(1)
 
 def try_login(driver):
     driver.get(login_url)
-    user = driver.find_element_by_name('username_mm1bbs6')
+    user = driver.find_element_by_name('username_mmlbbs6')
     user.send_keys(user_id)
-    pwd = driver.find_element_by_name('password_mm1bbs6')
+    pwd = driver.find_element_by_name('password_mmlbbs6')
     pwd.send_keys(password)
     pwd.submit()
 
