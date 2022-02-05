@@ -20,9 +20,10 @@ def send_gmail(msg):
     server = smtplib.SMTP_SSL(
         'smtp.gmail.com', 465,
         context=ssl.create_default_context())
+    server.set_debuglevel(1)
     server.login(gmail.account, gmail.password)
     server.send_message(msg)
 
 if __name__ == '__main__':
     send_test_email()
-    print('ok')
+    print('ok.')
